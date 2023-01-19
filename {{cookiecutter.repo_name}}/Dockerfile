@@ -14,5 +14,5 @@ tree -y \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
 
-COPY . /{{cookiecutter.repo-name}}/
-WORKDIR /{{cookiecutter.repo-name}}
+COPY . /{{cookiecutter.repo_name}}/
+WORKDIR /{{cookiecutter.repo_name}}

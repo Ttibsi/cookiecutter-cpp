@@ -1,4 +1,4 @@
-# {{cookiecutter.repo-name|upper}}
+# {{cookiecutter.repo_name|upper}}
 
 
 ### HOW TO RUN

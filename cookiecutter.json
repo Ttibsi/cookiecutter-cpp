@@ -1,5 +1,5 @@
 {
-    "repo-name": "template",
-    "exec-name": "foo",
+    "repo_name": "template",
+    "exec_name": "foo",
     "version": "v0.1.0"
 }

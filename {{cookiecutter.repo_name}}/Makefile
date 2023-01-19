@@ -1,5 +1,5 @@
-BINARY := {{cookiecutter.exec-name}} 
-REPO := {{cookiecutter.repo-name}} 
+BINARY := {{cookiecutter.exec_name}} 
+REPO := {{cookiecutter.repo_name}} 
 
 .PHONY: all
 all: help
