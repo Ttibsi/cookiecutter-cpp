@@ -1,5 +1,6 @@
-BINARY := {{cookiecutter.exec_name}} 
-REPO := {{cookiecutter.repo_name}} 
+BINARY := {{cookiecutter.exec_name}}
+REPO := {{cookiecutter.repo_name}}
+ENV_NAME := $(REPO)_env
 
 .PHONY: all
 all: help
@@ -10,18 +11,18 @@ help:
 testenv: # Build a docker environment
 	@echo "[Create Env]"
 	docker build -f Dockerfile -t env .
-	docker run -td --name="my_env" env
+	docker run -td --name=$(ENV_NAME) env
 
 generate: testenv # Run CMake in a docker env
 	@echo "[Running CMake]"
-	docker exec my_env cmake -DRUN_TESTS=OFF -S /$(REPO)/ -B build/
+	docker exec $(ENV_NAME) cmake -DRUN_TESTS=OFF -S /$(REPO)/ -B build/
 
 create: generate # Make the pre-generated makefiles in the docker env
 	@echo "[Running generated Makefile]"
-	docker exec --workdir="/$(REPO)/build/" my_env make
+	docker exec --workdir="/$(REPO)/build/" $(ENV_NAME) make
 
 run: create
-	docker exec my_env ./build/src/$(BINARY)
+	docker exec $(ENV_NAME) ./build/src/$(BINARY)
 
 local-build: # Build repo locally to build/
 	@echo "[Building to build/]"
@@ -32,7 +33,7 @@ local-build: # Build repo locally to build/
 
 env: # Connect to the pre-existing testenv in a tty
 	@echo "[Launch existing TTY]"
-	docker exec -ti my_env bash
+	docker exec -ti $(ENV_NAME) bash
 
 docker-clean: # Remove docker environments
 	@echo "[Removing container]"
