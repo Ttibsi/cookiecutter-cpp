@@ -17,8 +17,5 @@ python3 -m virtualenv venv && \
 pip install cookiecutter \
 && cookiecutter gh:ttibsi/cookiecutter-cpp \
 && deactivate && \
-rm -rf venv && \
-mv template/* . && \
-mv template/.* . && \
-rmdir template
+rm -rf venv
 ```
