@@ -1,10 +1,10 @@
 # cookiecutter-cpp
 
-A cookiecutter to setup all the default files I use in a c++ repo. This 
-includes my clang setup, CMake, pre-commit, and a dockerfile for ubuntu 
+A cookiecutter to setup all the default files I use in a c++ repo. This
+includes my clang setup, CMake, pre-commit, and a dockerfile for ubuntu
 development
 
-See [cookiecutter](https://github.com/cookiecutter/cookiecutter) tool repo for 
+See [cookiecutter](https://github.com/cookiecutter/cookiecutter) tool repo for
 how this works
 
 ### How to use
@@ -19,3 +19,7 @@ pip install cookiecutter \
 && deactivate && \
 rm -rf venv
 ```
+
+### Todo
+- [ ] github actions to run `ctest`, `pre-commit autoupdate`
+- [ ] Cookiecutter option for c++ standard version (currently using 17)

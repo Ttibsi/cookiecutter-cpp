@@ -5,7 +5,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 #     # list cpp/hpp files here
 # )
 
-add_executable(${PROJECT_NAME} 
-    main.cpp 
+add_executable(${PROJECT_NAME}
+    main.cpp
     # lib
 )

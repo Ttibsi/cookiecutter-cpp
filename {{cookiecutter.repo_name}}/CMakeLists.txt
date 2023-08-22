@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14.0)
-project({{cookiecutter.exec_name}} CXX)
+project({{cookiecutter.exec_name}} CXX {{cookiecutter.version}})
 {% if cookiecutter.tests -%}
 option(RUN_TESTS "Run unit tests" ON)
 {% endif -%}

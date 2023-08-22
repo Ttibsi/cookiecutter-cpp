@@ -8,7 +8,7 @@ Prerequisites: `Docker`, `Make`
 make testenv run
 ```
 
-To run the unit tests, you can either `cd build/ && ctest` in the docker 
+To run the unit tests, you can either `cd build/ && ctest` in the docker
 container, or from your own machine, you can run `make clean test`
 {% else -%}
 Prerequisites: `cmake`, `make`
