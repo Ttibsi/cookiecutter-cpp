@@ -24,6 +24,9 @@ create: generate # Make the pre-generated makefiles in the docker env
 run: create
 	docker exec $(ENV_NAME) ./build/src/$(BINARY)
 
+test: create
+	docker exec --workdir="/$(REPO)/build/" $(ENV_NAME) ctest
+
 local-build: # Build repo locally to build/
 	@echo "[Building to build/]"
 	rm -rf build
