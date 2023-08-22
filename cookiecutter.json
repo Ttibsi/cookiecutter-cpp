@@ -1,5 +1,7 @@
 {
     "repo_name": "template",
     "exec_name": "foo",
+    "docker": false,
+    "tests": true,
     "version": "v0.1.0"
 }

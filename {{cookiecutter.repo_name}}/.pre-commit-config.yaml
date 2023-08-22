@@ -17,7 +17,9 @@ repos:
     rev: 1.4.2
     hooks:
       - id: cmakelint
+{% if cookiecutter.docker %}
   - repo: https://github.com/hadolint/hadolint
     rev: v2.12.1-beta
     hooks:
       - id: hadolint-docker
+{% endif %}
