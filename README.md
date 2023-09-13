@@ -19,6 +19,3 @@ pip install cookiecutter \
 && deactivate && \
 rm -rf venv
 ```
-
-### Todo
-- [ ] github actions to run `ctest`, `pre-commit autoupdate`
