@@ -1,6 +1,7 @@
 {
     "repo_name": "template",
     "exec_name": "foo",
+    "cpp_standard": "17",
     "docker": false,
     "tests": true,
     "version": "0.1.0"

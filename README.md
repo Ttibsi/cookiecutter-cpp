@@ -22,4 +22,3 @@ rm -rf venv
 
 ### Todo
 - [ ] github actions to run `ctest`, `pre-commit autoupdate`
-- [ ] Cookiecutter option for c++ standard version (currently using 17)
