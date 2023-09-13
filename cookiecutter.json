@@ -4,5 +4,5 @@
     "cpp_standard": "17",
     "docker": false,
     "tests": true,
-    "version": "v0.1.0"
+    "version": "0.1.0"
 }

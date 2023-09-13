@@ -3,8 +3,5 @@ add_executable(test_exe
     main.cpp
 )
 
-# target_link_libraries(test_exe
-#     lib
-# )
-
+target_link_libraries(test_exe PRIVATE lib)
 add_test(Tests test_exe)
