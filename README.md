@@ -17,5 +17,6 @@ python3 -m virtualenv venv && \
 pip install cookiecutter \
 && cookiecutter gh:ttibsi/cookiecutter-cpp \
 && deactivate && \
-rm -rf venv
+rm -rf venv && \
+echo "Generation complete..."
 ```
