@@ -4,6 +4,7 @@ project({{cookiecutter.exec_name}} LANGUAGES CXX VERSION {{cookiecutter.version}
 option(RUN_TESTS "Run unit tests" ON)
 {% endif -%}
 set(CMAKE_CXX_STANDARD {{cookiecutter.cpp_standard}})
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_compile_options(-Wall)
 add_compile_options(-Wextra)
