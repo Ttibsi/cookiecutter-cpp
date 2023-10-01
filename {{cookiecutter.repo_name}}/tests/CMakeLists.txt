@@ -2,12 +2,12 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 include(FetchContent)
-FetchContent_Declare(
+fetchcontent_declare(
   googletest
   GIT_REPOSITORY https://github.com/google/googletest.git
   GIT_TAG        v1.14.0
 )
-FetchContent_MakeAvailable(googletest)
+fetchcontent_makeavailable(googletest)
 include(GoogleTest)
 
 add_library(GTest INTERFACE IMPORTED)
