@@ -1,6 +1,6 @@
 #include <cassert>
 
-#include "../src/tmp.h"
+#include "tmp.h"
 
 int main() {
     assert(tmp() == 0);
