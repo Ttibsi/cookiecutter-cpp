@@ -1,8 +1,7 @@
-#include <cassert>
-
 #include "tmp.h"
 
-int main() {
-    assert(tmp() == 0);
-    return 0;
+#include "gtest/gtest.h"
+
+TEST(exampleTestSuite, exampleTest) {
+    ASSERT_EQ(tmp(), 0);
 }
