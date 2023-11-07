@@ -27,3 +27,7 @@ repos:
     hooks:
       - id: hadolint-docker
 {% endif -%}
+  - repo: https://github.com/sco1/brie-commit
+    rev: v1.1.0
+    hooks:
+    -   id: brie-commit
