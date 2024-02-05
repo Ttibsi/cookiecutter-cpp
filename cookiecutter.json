@@ -4,5 +4,6 @@
     "cpp_standard": "17",
     "docker": false,
     "tests": true,
+    "test_framework": ["none", "gtest", "catch2"],
     "version": "0.1.0"
 }
