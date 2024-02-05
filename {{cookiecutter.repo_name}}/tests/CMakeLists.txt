@@ -21,16 +21,19 @@ FetchContent_Declare(
 )
 
 FetchContent_MakeAvailable(Catch2)
+include(CTest)
+include(Catch)
 {% endif -%}
 
 add_executable(test_exe
     # test files here
-    main.cpp
+    test_add.cpp
 )
 
 {% if cookiecutter.test_framework == "gtest" -%}
 target_link_libraries(test_exe PRIVATE lib GTest)
+gtest_discover_tests(test_exe)
 {% elif cookiecutter.test_framework == "catch2" -%}
 target_link_libraries(test_exe PRIVATE lib Catch2::Catch2WithMain)
+catch_discover_tests(test_exe)
 {% endif -%}
-gtest_discover_tests(test_exe)
