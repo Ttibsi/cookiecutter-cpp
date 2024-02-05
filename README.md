@@ -20,3 +20,8 @@ pip install cookiecutter \
 rm -rf venv && \
 echo "Generation complete..."
 ```
+
+The following files are there for demonstration and can be removed:
+* `src/add.cpp`
+* `src/add.h`
+* `tests/test_add.cpp`
