@@ -7,7 +7,9 @@ set(CMAKE_CXX_STANDARD {{cookiecutter.cpp_standard}})
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_compile_options(-Wall)
-add_compile_options(-Wextra)
+if (NOT WIN32)
+    add_compile_options(-Wextra)
+endif()
 
 add_subdirectory(src)
 
